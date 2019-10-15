@@ -1,4 +1,3 @@
-# Install in the main application target using: pod 'EarlGreyApp'
 Pod::Spec.new do |s|
 
   s.name = "EarlGreyApp"
@@ -6,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary = "iOS UI Automation Test Framework"
   s.homepage = "https://github.com/google/EarlGrey"
   s.author = "Google LLC."
-  s.summary = 'EarlGrey is a native iOS UI automation test framework that enables you to write clear, concise tests.\\n\\n'\
+  s.description = 'EarlGrey is a native iOS UI automation test framework that enables you to write clear, concise tests.\\n\\n'\
                 'With the EarlGrey framework, you have access to enhanced synchronization features. EarlGrey automatically'\
                 ' synchronizes with the UI, network requests, and various queues, but still allows you to manually implement'\
                 ' customized timings, if needed.\\n\\nEarlGrey’s synchronization features help ensure that the UI is in a'\
@@ -18,8 +17,8 @@ Pod::Spec.new do |s|
   s.source = { :http => "https://www.github.com/google/EarlGrey/releases/download/2.0.0/EarlGreyApp.zip" }
   s.vendored_frameworks = "AppFramework.framework"
 
-  s.pod_target_xcconfig = { "FRAMEWORK_SEARCH_PATHS" =>"$(inherited) $(PLATFORM_DIR)/Developer/Library/Frameworks",
-                              "ENABLE_BITCODE" => "NO" }
-
+  s.pod_target_xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(inherited) $(PLATFORM_DIR)/Developer/Library/Frameworks",
+                            "ENABLE_BITCODE" => "NO" }
+  s.user_target_xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "${PODS_ROOT}/EarlGreyApp" }
   s.platform = :ios, '10.0'
 end
