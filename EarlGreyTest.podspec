@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.summary = "iOS UI Automation Test Framework"
   s.homepage = "https://github.com/google/EarlGrey"
   s.author = "Google LLC."
-  s.summary = 'EarlGrey is a native iOS UI automation test framework that enables you to write clear, concise tests.\\n\\n'\
+  s.description = 'EarlGrey is a native iOS UI automation test framework that enables you to write clear, concise tests.\\n\\n'\
                 'With the EarlGrey framework, you have access to enhanced synchronization features. EarlGrey automatically'\
                 ' synchronizes with the UI, network requests, and various queues, but still allows you to manually implement'\
                 ' customized timings, if needed.\\n\\nEarlGrey’s synchronization features help ensure that the UI is in a'\
